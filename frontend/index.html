@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Heart Attack Prediction</title>
+</head>
+
+<body class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row container-title-logo">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="heart-img">
+                                <img src="./images/heart.png" alt="heart">
+                            </div>
+                            <h1>Heart Attack Prediction</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-row-container">
+                <div class="col-sm-6 form-col-container">
+                    <div class="row">
+                        <div class="col-sm-12 form-title">
+                            <h2>Pacient Information:</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form action="" method="POST">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label for="age">age</label><br>
+                                        <input type="text" name="age" id="age" required="required">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="sex">sex</label><br>
+                                        <input type="text" name="sex" id="sex" required="required">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="cp">cp</label><br>
+                                        <input type="text" name="cp" id="cp" required="required">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="trestbps">trestbps</label><br>
+                                        <input type="text" name="trestbps" id="trestbps" required="required">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label for="chol">chol</label><br>
+                                        <input type="text" name="chol" id="chol" required="required">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="fbs">fbs</label><br>
+                                        <input type="text" name="fbs" id="fbs" required="required">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="restecg">restecg</label><br>
+                                        <input type="text" name="restecg" id="restecg" required="required">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="thalach">thalach</label><br>
+                                        <input type="text" name="thalach" id="thalach" required="required">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label for="exang">exang</label><br>
+                                        <input type="text" name="exang" id="exang" required="required">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="oldpeak">oldpeak</label><br>
+                                        <input type="text" name="oldpeak" id="oldpeak" required="required">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="slope">slope</label><br>
+                                        <input type="text" name="slope" id="slope" required="required">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="ca">ca</label><br>
+                                        <input type="text" name="ca" id="ca" required="required">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label for="thal">thal</label><br>
+                                        <input type="text" name="thal" id="thal" required="required">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="target">target</label><br>
+                                        <input type="text" name="target" id="target" required="required">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="submit">Run Model</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+</html>
