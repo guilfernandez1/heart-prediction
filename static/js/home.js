@@ -1,11 +1,10 @@
-$(document).ready(function(e) {
-
-    $('#runModel').click(function() {
+$(document).ready(function (e) {
+    $('#runModel').submit(function (event) {
         var age = $('#age').val();
         var sex = $('#sex').val();
         var cp = $('#cp').val();
         var trestbps = $('#trestbps').val();
-        var chol = $('#cholesterol').val();
+        var chol = $('#chol').val();
         var fbs = $('#fbs').val();
         var restecg = $('#restecg').val();
         var thalach = $('#thalach').val();
@@ -14,8 +13,7 @@ $(document).ready(function(e) {
         var slope = $('#slope').val();
         var ca = $('#ca').val();
         var thal = $('#thal').val();
-        var target = $('#target').val();
-        
+
         var inputData = {
             'age': age,
             'sex': sex,
@@ -29,19 +27,19 @@ $(document).ready(function(e) {
             'oldpeak': oldpeak,
             'slope': slope,
             'ca': ca,
-            'thal': thal,
-            'target': target
+            'thal': thal
         };
 
         $.ajax({
-            url: 'main/api/run_model',
+            url: this.action,
+            type: this.method,
             data: inputData,
-            type: 'post',
-            success: function(response) {
-                console.log(response);
-                $('#hfResult').append(`<h2>GRAPHIC</h2>`)
-            }
         })
-    });
+        .done(function (response) {
+            console.log(response);
+            $('#hfResult').append(`<p>Patient has a ${response.pred} probability of heart failure</p>`)
+        });
 
+        event.preventDefault();
+    });
 });

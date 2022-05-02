@@ -35,72 +35,98 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <form>
+                            <form action="main/api/run_model" id="runModel" method="POST">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <label for="age">age</label><br>
-                                        <input type="text" name="age" id="age" required="required">
+                                        <label for="age">Age</label><br>
+                                        <input type="number" name="age" id="age" required="required" min="0" max="119"
+                                            value="50">
                                     </div>
                                     <div class="col-sm-3">
-                                        <label for="sex">sex</label><br>
-                                        <input type="text" name="sex" id="sex" required="required">
+                                        <label for="sex">Sex</label><br>
+                                        <select name="sex" id="sex">
+                                            <option value="1">Male</option>
+                                            <option value="0">Female</option>
+                                        </select>
                                     </div>
                                     <div class="col-sm-3">
-                                        <label for="cp">cp</label><br>
-                                        <input type="text" name="cp" id="cp" required="required">
+                                        <label for="cp">Chest Pain Type</label><br>
+                                        <select name="cp" id="cp">
+                                            <option value="0">TA</option>
+                                            <option value="1">ATA</option>
+                                            <option value="2">NAP</option>
+                                            <option value="3">ASY</option>
+                                        </select>
                                     </div>
                                     <div class="col-sm-3">
-                                        <label for="trestbps">trestbps</label><br>
-                                        <input type="text" name="trestbps" id="trestbps" required="required">
+                                        <label for="trestbps">Resting Blood Pressure</label><br>
+                                        <input type="number" name="trestbps" id="trestbps" required="required" min="0"
+                                            max="300" value="120">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <label for="chol">chol</label><br>
-                                        <input type="text" name="chol" id="chol" required="required">
+                                        <label for="chol">Cholesterol</label><br>
+                                        <input type="number" name="chol" id="chol" required="required" min="0" max="700"
+                                            value="200">
                                     </div>
                                     <div class="col-sm-3">
-                                        <label for="fbs">fbs</label><br>
-                                        <input type="text" name="fbs" id="fbs" required="required">
+                                        <label for="fbs">Fasting Blood Sugar</label><br>
+                                        <input type="number" name="fbs" id="fbs" required="required" min="0" max="1"
+                                            value="1">
                                     </div>
                                     <div class="col-sm-3">
-                                        <label for="restecg">restecg</label><br>
-                                        <input type="text" name="restecg" id="restecg" required="required">
+                                        <label for="restecg">Resting ECG</label><br>
+                                        <select name="restecg" id="restecg">
+                                            <option value="0">Normal</option>
+                                            <option value="1">ST</option>
+                                            <option value="2">LVH</option>
+                                        </select>
                                     </div>
                                     <div class="col-sm-3">
-                                        <label for="thalach">thalach</label><br>
-                                        <input type="text" name="thalach" id="thalach" required="required">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <label for="exang">exang</label><br>
-                                        <input type="text" name="exang" id="exang" required="required">
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <label for="oldpeak">oldpeak</label><br>
-                                        <input type="text" name="oldpeak" id="oldpeak" required="required">
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <label for="slope">slope</label><br>
-                                        <input type="text" name="slope" id="slope" required="required">
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <label for="ca">ca</label><br>
-                                        <input type="text" name="ca" id="ca" required="required">
+                                        <label for="thalach">Max Heart Rate</label><br>
+                                        <input type="number" name="thalach" id="thalach" required="required" min="60"
+                                            max="202" value="120">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <label for="thal">thal</label><br>
-                                        <input type="text" name="thal" id="thal" required="required">
+                                        <label for="exang">Exercise Angina</label><br>
+                                        <select name="exang" id="exang">
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
                                     </div>
                                     <div class="col-sm-3">
-                                        <label for="target">target</label><br>
-                                        <input type="text" name="target" id="target" required="required">
+                                        <label for="oldpeak">Oldpeak</label><br>
+                                        <input type="number" name="oldpeak" id="oldpeak" required="required" min="-3"
+                                            max="7" value="0.90" step="any">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="slope">ST Slope</label><br>
+                                        <select name="restecg" id="restecg">
+                                            <option value="0">Up</option>
+                                            <option value="1">Flat</option>
+                                            <option value="2">Down</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="ca">CA</label><br>
+                                        <input type="number" name="ca" id="ca" required="required" min="0" max="2"
+                                            value="1">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label for="thal">Thalassemia</label><br>
+                                        <select name="thal" id="thal">
+                                            <option value="0">Normal</option>
+                                            <option value="1">Fixed Defect</option>
+                                            <option value="2">Reversable Defect</option>
+                                        </select>
                                     </div>
                                     <div class="col-sm-6">
-                                        <button id="runModel" type="submit">Run Model</button>
+                                        <button type="submit">Run Model</button>
                                     </div>
                                 </div>
                             </form>
@@ -118,7 +144,9 @@
                             <h2>Results:</h2>
                         </div>
                     </div>
-                    <div class="row" id="hfResult"> 
+                    <div class="row">
+                        <div class="col-sm-12" id="hfResult">
+                        </div>
                     </div>
                 </div>
             </div>
