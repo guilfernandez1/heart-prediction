@@ -1,5 +1,8 @@
 $(document).ready(function (e) {
     $('#runModel').submit(function (event) {
+
+        $('#hfResult').empty();
+
         var age = $('#age').val();
         var sex = $('#sex').val();
         var cp = $('#cp').val();
@@ -36,8 +39,11 @@ $(document).ready(function (e) {
             data: inputData,
         })
         .done(function (response) {
-            console.log(response);
-            $('#hfResult').append(`<p>Patient has a ${response.pred} probability of heart failure</p>`)
+            if(response.pred == 0) {
+                $('#hfResult').append(`<p>The Pacient does not have a Heart Disease</p>`)
+            } else {
+                $('#hfResult').append(`<p>The Pacient has Heart Disease</p>`)
+            }
         });
 
         event.preventDefault();
