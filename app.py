@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 from routes import bp1
-from pycaret.regression import *
 
 app = Flask(__name__)
 
